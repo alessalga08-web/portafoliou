@@ -1,4 +1,4 @@
-import { Code2 as Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
