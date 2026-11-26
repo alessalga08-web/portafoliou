@@ -1,3 +1,6 @@
+
+import Image from "next/image";
+
 import { Navbar } from "@/components/layout/Navbar";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
@@ -17,7 +20,7 @@ export default function Home() {
         className="flex min-h-screen items-center px-6 pt-24"
       >
         <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
-          
+
           {/* Texto */}
           <div className="text-center md:text-left">
             <p className="mb-4 text-sm uppercase tracking-[0.4em] text-panem-gold">
@@ -28,7 +31,7 @@ export default function Home() {
               PORTAFOLIO
             </h1>
 
-            <div className="my-8 h-px w-24 bg-panem-gold mx-auto md:mx-0" />
+            <div className="my-8 mx-auto h-px w-24 bg-panem-gold md:mx-0" />
 
             <h2 className="text-2xl font-semibold md:text-3xl">
               Enrique Alejandro Salgado Menjívar
@@ -50,17 +53,20 @@ export default function Home() {
           {/* Foto */}
           <div className="flex justify-center md:justify-end">
             <div className="relative">
-              
+
               {/* Marco decorativo */}
               <div className="absolute -inset-3 border border-panem-gold/30" />
               <div className="absolute -inset-6 border border-panem-gold/10" />
 
-              {/* Foto */}
+              {/* Foto de perfil */}
               <div className="relative h-80 w-64 overflow-hidden border border-panem-gold/50 bg-panem-ivory/[0.03] md:h-[430px] md:w-[340px]">
-                <img
+                <Image
                   src="/foto-perfil.png"
                   alt="Fotografía personal"
-                  className="h-full w-full object-cover"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 256px, 340px"
+                  className="object-cover"
                 />
               </div>
 
