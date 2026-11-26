@@ -1,4 +1,3 @@
-import { Github } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
@@ -58,7 +57,6 @@ export function Projects() {
               delay={index * 0.1}
             >
               <article className="group h-full border border-panem-gold/20 bg-panem-ivory/[0.03] p-8 transition duration-300 hover:border-panem-gold/60 hover:bg-panem-red/10">
-                
                 <p className="text-sm text-panem-gold">
                   {project.number}
                 </p>
@@ -77,11 +75,9 @@ export function Projects() {
                   href={`${githubUrl}${project.path}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex items-center gap-2 border border-panem-gold/40 px-4 py-2 text-sm text-panem-gold transition hover:bg-panem-gold hover:text-panem-black"
+                  className="mt-8 inline-block border border-panem-gold/40 px-4 py-2 text-sm font-medium text-panem-gold transition hover:bg-panem-gold hover:text-panem-black"
                 >
-                  <Github size={18} />
-
-                  Ver código
+                  VER CÓDIGO EN GITHUB
                 </a>
               </article>
             </Reveal>
@@ -94,10 +90,8 @@ export function Projects() {
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 border border-panem-gold bg-panem-gold px-6 py-3 font-semibold text-panem-black transition hover:bg-transparent hover:text-panem-gold"
+              className="border border-panem-gold bg-panem-gold px-6 py-3 font-semibold text-panem-black transition hover:bg-transparent hover:text-panem-gold"
             >
-              <Github size={20} />
-
               VER MI GITHUB
             </a>
           </div>
