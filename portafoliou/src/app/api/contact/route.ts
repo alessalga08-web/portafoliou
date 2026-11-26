@@ -1,10 +1,22 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    const contactEmail = process.env.CONTACT_EMAIL;
+
+    if (!apiKey || !contactEmail) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "El servicio de contacto no está configurado.",
+        },
+        { status: 503 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
     const body = await request.json();
 
     const name = String(body.name ?? "").trim();
@@ -56,7 +68,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: "Portafolio <onboarding@resend.dev>",
-      to: [process.env.CONTACT_EMAIL!],
+      to: [contactEmail],
       subject: `Nuevo mensaje de ${name}`,
       replyTo: email,
       text: `
