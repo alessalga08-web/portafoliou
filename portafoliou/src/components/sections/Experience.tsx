@@ -20,19 +20,59 @@ export function Experience() {
           <Reveal delay={0.1}>
             <article className="grid gap-4 border-l border-panem-gold/30 pl-6 md:grid-cols-[180px_1fr]">
               <p className="text-sm uppercase tracking-[0.2em] text-panem-gold">
+                2024
+              </p>
+
+              <div>
+                <h3 className="text-xl font-semibold">
+                  Hackaton 2024 ¡Supérate! Fundación Frech
+                </h3>
+                <p className="mt-3 leading-8 text-panem-ivory/60">
+                  Equipo Vitalmentis
+                </p>
+              </div>
+
+            <br></br>
+
+            </article>
+          </Reveal>
+        </div>
+        <div className="space-y-8">
+          <Reveal delay={0.1}>
+            <article className="grid gap-4 border-l border-panem-gold/30 pl-6 md:grid-cols-[180px_1fr]">
+              <p className="text-sm uppercase tracking-[0.2em] text-panem-gold">
+                2025
+              </p>
+
+              <div>
+                <h3 className="text-xl font-semibold">
+                  Expo de logros 2025 ¡Supérate! Fundación Frech
+                </h3>
+                <p className="mt-3 leading-8 text-panem-ivory/60">
+                  Equipo Timelymeds
+                </p>
+             </div>
+            </article>
+          </Reveal>
+        </div>
+
+        <br></br>
+
+                <div className="space-y-8">
+          <Reveal delay={0.1}>
+            <article className="grid gap-4 border-l border-panem-gold/30 pl-6 md:grid-cols-[180px_1fr]">
+              <p className="text-sm uppercase tracking-[0.2em] text-panem-gold">
                 2026
               </p>
 
               <div>
                 <h3 className="text-xl font-semibold">
-                  Experiencia académica
+                  ExpoTech 2026 ¡Supérate! Fundación Frech
                 </h3>
-
                 <p className="mt-3 leading-8 text-panem-ivory/60">
-                  Aquí colocaremos una experiencia real de tu trayectoria
-                  académica.
+                  Equipo SAFEN
                 </p>
-              </div>
+             </div>
             </article>
           </Reveal>
         </div>
